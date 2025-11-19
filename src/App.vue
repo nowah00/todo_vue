@@ -2,6 +2,7 @@
 import TodoHeader from './components/TodoHeader.vue';
 import TodoList from './components/TodoList.vue';
 import TodoInput from './components/TodoInput.vue';
+
 import { computed } from 'vue';
 
 export default {
@@ -23,7 +24,7 @@ export default {
       const item = {
         id: Math.random(), // todo id를 고유값으로 랜덤하게 저장
         msg: inputMsg, // 할일 content
-        complete: false, // 완료 여부
+        completed: false, // 완료 여부
       };
       this.todo.push(item);
     },

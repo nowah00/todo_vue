@@ -12,10 +12,12 @@ export default {
 
   methods: {
     deleteTodo(id) {
+      console.log('deleteTodo');
       this.$emit('delete-todo', id);
     },
 
     updateTodo(id) {
+      console.log('updateTodo');
       this.$emit('update-todo', id);
     },
   },
@@ -37,6 +39,7 @@ export default {
         id="chk"
         :id="`chk${item.id.toString()}`"
         :checked="item.completed"
+        @click="updateTodo(item.id)"
       />
       <label
         :for="`chk${item.id.toString()}`"
